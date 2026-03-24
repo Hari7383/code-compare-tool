@@ -4,7 +4,7 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "build": "set CSC_IDENTITY_AUTO_DISCOVERY=false && set NODE_TLS_REJECT_UNAUTHORIZED=0 && electron-builder"
+        "build": "electron-builder"
     },
     "build": {
         "appId": "com.dotfit.codecompare",
