@@ -1,0 +1,28 @@
+{
+    "name": "code-compare-tool",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "set CSC_IDENTITY_AUTO_DISCOVERY=false && set NODE_TLS_REJECT_UNAUTHORIZED=0 && electron-builder"
+    },
+    "build": {
+        "appId": "com.dotfit.codecompare",
+        "productName": "DOTfit Code Compare",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "**/*",
+            "!node_modules/.cache"
+        ],
+        "npmRebuild": false,
+        "win": {
+            "target": "nsis",
+            "icon": "assets/icon.ico"
+        }
+    },
+    "devDependencies": {
+        "electron-builder": "^26.8.1"
+    }
+}

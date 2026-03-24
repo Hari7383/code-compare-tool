@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOTfit Code Compare Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- <h2>DOTfit Code Compare Tool</h2> -->
+
+    <select id="languageSelect">
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="html">HTML</option>
+        <option value="java">Java</option>
+        <option value="cpp">C++</option>
+        <option value="php">PHP</option>
+        <option value="notepad">Notepad</option>
+    </select>
+
+    <div id="editors">
+        <div id="editor1"></div>
+        <div id="editor2"></div>
+    </div>
+
+    <script src="https://unpkg.com/monaco-editor@0.44.0/min/vs/loader.js"></script>
+    <script src="https://unpkg.com/diff-match-patch/index.js"></script>
+    <script src="app.js"></script>
+
+    <h3 id="notesTitle">Notes</h3>
+
+    <div id="noteTabs">
+        <div id="addTab">+</div>
+    </div>
+
+    <!-- <textarea id="noteEditor"></textarea> -->
+    <div id="noteEditorContainer"></div>
+
+    <div id="emptyState" style="display:none;">
+        <h2>DOTfit Code Compare Tool</h2>
+        <p>Version 1.0</p>
+        <p>Built with Electron + Monaco Editor</p>
+
+        <p><b>Start</b></p>
+        <p onclick="addNoteTab()" style="cursor:pointer; color:#4fc3f7;">
+            Create New Note
+        </p>
+    </div>
+
+    <div id="noteActions">
+        <button onclick="saveCurrentNote()">Save</button>
+        <button onclick="saveAllNotes()">Save All</button>
+    </div>
+
+    <!-- <div id="notesContainer"></div> -->
+
+</body>
+
+</html>
