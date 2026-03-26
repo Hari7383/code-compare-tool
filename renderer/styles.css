@@ -172,7 +172,7 @@ body {
     position: relative;
 }
 
-/* .tab-name::after {
+.tab-name::after {
     content: "";
     position: absolute;
     right: 0;
@@ -180,8 +180,8 @@ body {
     height: 100%;
     width: 20px;
 
-    background: linear-gradient(to right, transparent, #1e1e1e);
-} */
+    /* background: linear-gradient(to right, transparent, #1e1e1e); */
+}
 
 .tab-close {
     flex-shrink: 0;
