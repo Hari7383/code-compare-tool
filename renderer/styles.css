@@ -158,17 +158,48 @@ body {
     margin-right: 2px;
     background: #2d2d2d;
     cursor: pointer;
+    min-width: 140px;
+    max-width: 140px;
+    overflow: hidden;
+}
+
+.tab-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    position: relative;
+}
+
+/* .tab-name::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+
+    background: linear-gradient(to right, transparent, #1e1e1e);
+} */
+
+.tab-close {
+    flex-shrink: 0;
+    margin-left: 6px;
+    color: #aaa;
+    cursor: pointer;
+    /* font-weight: bold; */
 }
 
 .tab.active {
     background: #1e1e1e;
 }
 
-.tab span {
+/* .tab span {
     margin-left: 6px;
     color: #aaa;
     cursor: pointer;
-}
+} */
 
 #addTab {
     padding: 5px 10px;
