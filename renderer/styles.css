@@ -22,7 +22,7 @@ body {
 
 #editors {
     display: flex;
-    height: 500px;
+    height: 465px;
     /* border: 1px solid #444; */
 }
 
@@ -157,6 +157,7 @@ body {
     padding: 5px 10px;
     margin-right: 2px;
     background: #2d2d2d;
+    justify-content: space-between;
     cursor: pointer;
     min-width: 140px;
     max-width: 140px;
@@ -185,7 +186,7 @@ body {
 
 .tab-close {
     flex-shrink: 0;
-    margin-left: 6px;
+    margin-left: 10px;
     color: #aaa;
     cursor: pointer;
     /* font-weight: bold; */
@@ -193,6 +194,7 @@ body {
 
 .tab.active {
     background: #1e1e1e;
+    /* background: linear-gradient(to right, transparent, #1e1e1e); */
 }
 
 /* .tab span {
@@ -224,7 +226,7 @@ body {
     display: flex;
     justify-content: flex-end;
     margin-top: 5px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 
 #noteActions button {
