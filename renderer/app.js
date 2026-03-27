@@ -290,6 +290,7 @@ function renderTabs() {
         // ===== NAME =====
         const nameSpan = document.createElement("span");
         nameSpan.innerText = note.name;
+        nameSpan.className = "tab-name";
 
         // 🔥 DOUBLE CLICK ONLY ON NAME (no conflict)
         nameSpan.addEventListener("dblclick", (e) => {
@@ -305,6 +306,7 @@ function renderTabs() {
         // ===== CLOSE BUTTON =====
         const closeBtn = document.createElement("span");
         closeBtn.innerText = "✕";
+        closeBtn.className = "tab-close";
         closeBtn.onclick = (e) => closeTab(index, e);
 
         // ===== TAB CLICK (INSTANT SWITCH) =====
@@ -394,20 +396,20 @@ function loadCurrentNote() {
     noteEditor.focus();
 }
 
-function closeTab(index, e) {
-    e.stopPropagation();
+// function closeTab(index, e) {
+//     e.stopPropagation();
 
-    notes.splice(index, 1);
+//     notes.splice(index, 1);
 
-    if (notes.length === 0) {
-        currentNoteIndex = -1;
-    } else if (currentNoteIndex >= notes.length) {
-        currentNoteIndex = notes.length - 1;
-    }
+//     if (notes.length === 0) {
+//         currentNoteIndex = -1;
+//     } else if (currentNoteIndex >= notes.length) {
+//         currentNoteIndex = notes.length - 1;
+//     }
 
-    renderTabs();
-    loadCurrentNote();
-}
+//     renderTabs();
+//     loadCurrentNote();
+// }
 
 
 // 💾 SAVE CURRENT NOTE
